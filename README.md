@@ -2,7 +2,7 @@
 
 ## 1. Problem Statement
 
-Large organizations maintain a pool of skilled resources (employees) that are not fully allocated to projects. When a new project opens, PMOs and delivery managers must scan spreadsheets or internal systems to identify the best-fit resources — a time-consuming, manual, and error-prone process. The goal of this project is to automate and improve resource selection by building an AI-powered assistant that:
+Large organizations maintain a pool of skilled resources (employees) that are not fully allocated to projects. When a new project opens, PMOs and delivery managers must scan spreadsheets or internal systems to identify the best-fit resources, which a time-consuming, manual, and error-prone process. The goal of this project is to automate and improve resource selection by building an AI-powered assistant that:
 
 - Accepts a job description (JD) as free text.
 - Matches the JD against a CSV resource pool using semantic search + lexical search.
@@ -57,7 +57,47 @@ This is an **Advanced RAG** implementation because it uses:
 
 ## 4. Setup & Usage Instructions
 
+### 4.1. Running the Deployed App (Recommended)
 
+The Streamlit version of the application is already deployed and does not require any setup or installation.
 
+**Live App Link:**  
+https://ai-rag-final-project.streamlit.app/
+
+**Usage Instructions:**
+
+1. Open the public app URL.
+2. Upload your **resources CSV file**.
+3. Paste your **Job Description (JD)**.
+4. Click **Run Matching**.
+5. Review ranked candidates and download results.
+
+This is the simplest way to use the system.
+
+---
+
+### 4.2. Running the App Locally
+
+If you prefer to run the application on your local machine:
+
+#### **Step 1: Install Dependencies**
+
+Ensure you have Python 3.9+ installed.  
+Then install all required packages using:
+
+```bash
+pip install -r requirements.txt
+```
+#### **Step 2: Add Gemini API Key**
+
+Create the file:  **.streamlit/secrets.toml**, and add :
+```bash
+GEMINI_API_KEY = "AIzaSyBZMliHbeznp9PaDqB00OvFRvAG1g_hSIc"
+```
+#### **Step 3: Run the App**
+
+```bash
+streamlit run app_single.py
+```
 
 
