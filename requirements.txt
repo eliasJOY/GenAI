@@ -1,0 +1,7 @@
+streamlit>=1.20
+pandas
+numpy
+sentence-transformers
+rank_bm25
+google-generativeai
+tqdm
